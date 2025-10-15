@@ -1,0 +1,201 @@
+/*
+
+filename: [lab04.css]
+
+author: [Thishula Nimsara]
+
+created: [8/24/2025]
+
+last modified: [8/24/2025]
+
+description: [html files it refers to (if known)]
+
+*/
+
+/* For laptop and desktop screens */
+/* Responsive design for medium screens (≤1024px): adjusts job cards to two per row with a minimum width */
+@media (max-width: 1024px) { 
+  .job-card {
+    width: calc(50% - 20px);  
+    min-width: 300px; 
+  }
+
+  /* Styles for main heading (h1): sets the font size to 2rem for consistent scalable sizing */
+  h1 {
+    font-size: 2rem; 
+  }
+
+/* Styles for footer links: adds horizontal spacing of 8px between each link */
+  footer a {
+    margin: 0 8px; 
+  }
+}
+
+/* For Tablets and Phablets */
+/* Responsive design for small screens (≤768px): stacks header and navigation vertically with spacing between items */
+@media (max-width: 768px) { 
+  header, .nav-wrapper { 
+    flex-direction: column;  
+    gap: 8px; 
+  }
+
+/* Responsive logo style: reduces logo size with adjusted margins for smaller screens */
+  .logo {
+    width: 64px; 
+    height: 96px; 
+    margin-top: 4px; 
+    margin-right: 0; 
+  }
+
+/* Styles for navigation container links: displays links as inline blocks with padding and medium font size */
+  .nav-container a {
+    display: inline-block; 
+    padding: 10px 12px; 
+    font-size: 16px; 
+  }
+
+/* Responsive job card style: makes each card full width, removes minimum width, and ensures padding/border are included in total size */
+  .job-card {
+    width: 100%; 
+    min-width: 0;            
+    box-sizing: border-box;  
+  }
+
+/* Responsive job card container: reduces gap and margins, adds horizontal padding for better layout on smaller screens */
+  .job-card-container {
+    gap: 16px; 
+    margin: 40px 0 32px; 
+    padding: 0 10px;          
+  }
+
+/* Responsive sidebar style: allows automatic width, adjusts margins, and reduces padding for smaller screens */
+  .sidebar {
+    width: auto !important;
+    margin: 18px 12px; 
+    padding: 20px; 
+  }
+
+/* Responsive apply button: expands to full width, centers text, and includes padding/border in total size */
+  .apply-btn {
+    width: 100%; 
+    text-align: center; 
+    box-sizing: border-box; 
+  }
+}
+
+/* For mobile phones */
+/* Media query for extra small screens (≤480px): applies mobile-friendly styles for very small devices */
+@media (max-width: 480px) { 
+  
+  /* Mobile background style: makes the background image scroll with the page instead of staying fixed */
+  body {
+    background-attachment: scroll; 
+  }
+
+  /* Responsive header and navigation: arranges items in a row, allows wrapping, centers them, and adds small gaps */
+  header, .nav-wrapper { 
+  flex-direction: row;   
+  flex-wrap: wrap;       
+  justify-content: center; 
+  gap: 4px;              
+  }
+
+  /* Responsive navigation links: reduces font size and padding for better fit on smaller screens */
+  .nav-container a {
+  font-size: 14px;      
+  padding: 6px 8px;     
+  }
+
+  /* Mobile heading style: reduces h1 font size to 1.6rem for better readability on smaller screens */
+  h1 {
+    font-size: 1.6rem; 
+  }
+
+  /* Mobile job card title (h2): reduces font size to 1.25rem for better balance on smaller screens */
+  .job-card h2 {
+    font-size: 1.25rem; 
+  }
+
+  /* Mobile job card subheading (h3): decreases font size to 1.05rem and reduces top margin for compact layout */
+  .job-card h3 {
+    font-size: 1.05rem; 
+    margin-top: 14px;  
+  }
+
+  /* Mobile job card style: reduces padding and applies a lighter shadow for a cleaner compact look */
+  .job-card {
+    padding: 16px; 
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06); 
+  }
+
+  /* Mobile footer style: reduces padding to 16px for a more compact layout on small screens */
+  footer {
+    padding: 16px; 
+  }
+
+  /* Mobile footer links: displays links as inline blocks with smaller font size and tighter margins for compact spacing */
+  footer a {
+    display: inline-block;  
+    margin: 6px 8px; 
+    font-size: 13px; 
+  }
+
+  /* Mobile apply button: displayed as a full-width block element with box-sizing for consistent sizing */
+  .apply-btn {
+    display: block; 
+    width: 100%; 
+    box-sizing: border-box; 
+  }
+}
+
+/* Better Accessibility */ 
+/* Removes hover effects on devices without hover (e.g., touchscreens) to keep job cards static with default shadow and border */
+@media (hover: none) { 
+  .job-card:hover {
+    transform: none; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); 
+    border: 1px solid #d2d2d7; 
+  }
+}
+
+/* Accessibility setting: disables transitions, animations, and smooth scrolling if user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) { 
+  * {
+    transition: none !important; 
+    animation: none !important; 
+    scroll-behavior: auto !important; 
+  }
+}
+
+/* For Ultra small phones */
+/* Extra small screen layout (≤360px): makes job cards full width, removes min-width, and adjusts padding for compact fit */
+@media (max-width: 360px) {  
+  .job-card {
+    width: 100%; 
+    min-width: 0;  
+    padding: 16px;  
+    box-sizing: border-box;  
+  }
+
+  /* Extra small screen job card container: adds horizontal padding for better spacing on very small devices */
+  .job-card-container {
+    padding: 0 10px;  
+  }
+
+  /* Extra small screen apply button: full-width block with centered text, normal wrapping, adjusted padding, and consistent sizing */
+  .apply-btn {
+    display: block;  
+    width: 100%; 
+    box-sizing: border-box;
+    text-align: center;  
+    white-space: normal;  
+    padding: 12px;  
+  }
+
+  /* Extra small screen job card content: ensures all elements stay within card width and allows text to wrap anywhere */
+  .job-card * {
+    max-width: 100%;  
+    overflow-wrap: anywhere;  
+  }
+}
+

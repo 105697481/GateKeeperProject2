@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+         <div class="logo-wrapper">
+            <img src="logo.png" alt="Logo" class="logo">
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="https://105517068.github.io/team-website/">Home</a></li>
+                <li><a href="https://105517068.github.io/jobswebpage/">Jobs</a></li>
+                <li><a href="https://105976643.github.io/Apply-form/">Apply</a></li>
+                <li><a href="https://105517068.github.io/aboutpage/">About</a></li>
+            </ul>
+        </nav></header>
+    <div class="container">
+            <h1 class="form-heading">Job Application</h1>
+         </div>
+        <form action="#" method="POST">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div class="form-group">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <div class="gender-options">
+                        <label><input type="radio" id="male" name="gender" value="male" required> Male</label>
+                        <label><input type="radio" id="female" name="gender" value="female" required> Female</label>
+                        <label><input type="radio" id="other" name="gender" value="other"> Other</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Contact Information</legend>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <div class="phone-container">
+                        <select id="country-code" name="country-code" required>
+                            <option value="+1">+1 (USA)</option>
+                            <option value="+44">+44 (UK)</option>
+                            <option value="+61">+61 (Australia)</option>
+                            <option value="+91">+91 (India)</option>
+                        </select>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required pattern="[0-9]{8,12}" title="8 to 12 digits">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Job Details</legend>
+                <div class="form-group">
+                    <label for="job-role">Job Role:</label>
+                    <select id="job-role" name="job-role" required>
+                        <option value="senior-security-analyst">Senior Security Analyst</option>
+                        <option value="junior-penetration-tester">Junior Penetration Tester</option>
+                        <option value="cybersecurity-intern">Cybersecurity Intern</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Job_Reference">Job Job_Reference:</label>
+                    <select id="Job_Reference" name="Job_Reference" required>
+                        <option value="senior-security-analyst">SEC-001</option>
+                        <option value="junior-penetration-tester">PEN-002</option>
+                        <option value="cybersecurity-intern"> INT-003</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="availability">Visa Class:</label>
+                    <select id="Visa Class" name="Visa Class" required>
+                        <option value="full-time">Citizen</option>
+                        <option value="part-time">Tempory visa</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Skills</legend>
+                <div class="skills-container">
+                    <label>
+                        <input type="checkbox" name="skills" value="network-security"> Network Security
+                    </label>
+                    <label>
+                        <input type="checkbox" name="skills" value="risk-management"> Risk Management
+                    </label>
+                    <label>
+                        <input type="checkbox" name="skills" value="web-app-testing"> Web Application Testing
+                    </label>
+                    <label>
+                        <input type="checkbox" name="skills" value="social-engineering"> Social Engineering
+                    </label>
+                    <label>
+                        <input type="checkbox" name="skills" value="ethical-hacking"> Ethical Hacking
+                    </label>
+                    <label>
+                        <input type="checkbox" name="skills" value="system-administration"> System Administration
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Information</legend>
+                <div class="form-group">
+                    <label for="Other Skill">Other Skill:</label>
+                    <textarea id="Other Skill" name="Other Skill" rows="6" placeholder="Please write a brief other skill..."></textarea>
+                </div>
+            </fieldset>
+
+            <button type="submit">Submit Application</button>
+            <button type="reset">Reset</button> <!-- Reset button -->
+        </form>
+    </div>
+   
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 CyberSecure Solutions Inc. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/105517068/team-website.git" target="_blank">GitHub Repository</a> |
+                <a href="https://thrishulanimsara111-1758724044663.atlassian.net/jira/software/projects/SCRUM/boards/1/timeline?atlOrigin=eyJpIjoiNWQ5YzRmZmQ1MjY0NDhiY2E5NmM3NzQzNDNhZjkyYjkiLCJwIjoiaiJ9" target="_blank">Jira Board</a> |
+                <a href="mailto:info@cybersecuresolutions.com">info@cybersecuresolutions.com</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
