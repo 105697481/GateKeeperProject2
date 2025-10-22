@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Oct 21, 2025 at 01:36 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Host: localhost
+-- Generation Time: Oct 22, 2025 at 04:00 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,9 @@ SET time_zone = "+00:00";
 --
 -- Database: `gate_keeper`
 --
+
+CREATE DATABASE IF NOT EXISTS `gate_keeper` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `gate_keeper`;
 
 -- --------------------------------------------------------
 
@@ -71,6 +74,22 @@ CREATE TABLE `eoi` (
   `application_date` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `eoi`
+--
+
+INSERT INTO `eoi` (`eoi_id`, `job_reference`, `first_name`, `last_name`, `email`, `phone`, `status`, `application_date`) VALUES
+(21, 'SEC01', 'Alice', 'Nguyen', 'alice.nguyen@email.com', '0401234567', 'New', '2025-10-22 09:00:00'),
+(22, 'PEN02', 'Bob', 'Tran', 'bob.tran@email.com', '0412345678', 'Reviewed', '2025-10-22 09:30:00'),
+(23, 'INT03', 'Charlie', 'Le', 'charlie.le@email.com', '0423456789', 'Accepted', '2025-10-22 10:00:00'),
+(24, 'SEC01', 'Diana', 'Pham', 'diana.pham@email.com', '0434567890', 'Rejected', '2025-10-22 10:30:00'),
+(25, 'PEN02', 'Edward', 'Vo', 'edward.vo@email.com', '0445678901', 'New', '2025-10-22 11:00:00'),
+(26, 'INT03', 'Fiona', 'Do', 'fiona.do@email.com', '0456789012', 'Reviewed', '2025-10-22 11:30:00'),
+(27, 'SEC01', 'George', 'Bui', 'george.bui@email.com', '0467890123', 'Accepted', '2025-10-22 12:00:00'),
+(28, 'PEN02', 'Hannah', 'Hoang', 'hannah.hoang@email.com', '0478901234', 'New', '2025-10-22 12:30:00'),
+(29, 'INT03', 'Ian', 'Dang', 'ian.dang@email.com', '0489012345', 'Rejected', '2025-10-22 13:00:00'),
+(30, 'SEC01', 'Jenny', 'Vu', 'jenny.vu@email.com', '0490123456', 'Reviewed', '2025-10-22 13:30:00');
+
 -- --------------------------------------------------------
 
 --
@@ -116,7 +135,17 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`) VALUES
-(1, 'gatekeeper', '105697481');
+(1, 'gatekeeper', '105697481'),
+(2, 'alice_admin', 'Cyber@123'),
+(3, 'bob_hunter', 'SecureMe!456'),
+(4, 'charlie_ops', 'Passw0rd!'),
+(5, 'diana_analyst', 'Analyst#789'),
+(6, 'edward_redteam', 'RedTeam$321'),
+(7, 'frank_blue', 'BlueSky!007'),
+(8, 'grace_devsec', 'DevSec@2024'),
+(9, 'henry_threat', 'ThreatX!999'),
+(10, 'irene_ciso', 'CISO#Secure'),
+(11, 'jack_pen_test', 'PenTest$888');
 
 --
 -- Indexes for dumped tables
@@ -158,7 +187,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `eoi`
 --
 ALTER TABLE `eoi`
-  MODIFY `eoi_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `eoi_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `jobs`
@@ -170,7 +199,7 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Constraints for dumped tables
