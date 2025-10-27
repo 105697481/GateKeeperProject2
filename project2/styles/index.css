@@ -1,0 +1,385 @@
+/*
+ * ===============================================
+ * GATEKEEPER INC. - MAIN STYLESHEET
+ * ===============================================
+ * Author: [Your Name]
+ * Description: External CSS stylesheet demonstrating various selector types,
+ * responsive design, and accessibility best practices.
+ * Last Updated: October 2025
+ */
+
+/* ===== LOGO STYLES ===== */
+/* Element selector for company logo image */
+.logo {
+  width: 80px; 
+  height: 120px; 
+  margin-top: 7px; 
+  margin-right: 5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.logo:hover {
+  transform: scale(1.05) rotate(3deg);
+  filter: drop-shadow(0 0 10px rgba(107, 166, 205, 0.4));
+}
+
+/* ===== RESET AND BASE STYLES ===== */
+/* Element selector - targets all body elements */
+body { 
+  font-family: Arial, sans-serif; 
+  margin: 0; 
+  padding: 0; 
+  /* Base typography and layout reset */
+}
+
+/* Universal selector - applies to all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Multiple element selector (grouped selectors) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Georgia', serif;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+/* Contextual selector - targets paragraphs inside list items */
+li p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+/* ===== HEADER AND NAVIGATION STYLES ===== */
+/* Element selector for header */
+header {
+  background-color: rgba(245, 245, 247, 0.3); 
+  padding: 0 20px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+/* ID selector example - unique navigation header */
+#main-navigation {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Styles for the navigation wrapper (from friend's styles.css) */
+.nav-wrapper {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  width: 100%; 
+}
+
+/* Styles for navigation links (from friend's styles.css) */
+nav a {
+  color: #424245; 
+        text-decoration: none; 
+        font-size: 16px; 
+        font-weight: 400; 
+        padding: 0 8px; 
+        transition: color 0.2s ease;
+}
+
+/* :hover pseudo-class for navigation links */
+nav a:hover {
+  color: #0071e3;
+}
+
+/* ===== MAIN CONTENT STYLES ===== */
+/* Contextual selectors - targeting nested elements */
+
+/* Class selector for main content container */
+.side-by-side {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 48px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+/* Adjacent sibling selector - styles elements immediately following others */
+.hometext-content + .homeimage-content {
+  margin-top: 20px;
+}
+
+/* General sibling selector - styles all siblings that follow */
+.hometext-content ~ div {
+  transition: all 0.3s ease;
+}
+.hometext-content,
+.abouttext-content,
+.servicetext-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0;
+  width: 100%;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  padding: 25px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid transparent;
+}
+
+.homeimage-content,
+.aboutimage-content,
+.serviceimage-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0;
+  width: 100%;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.hometext-content:hover,
+.abouttext-content:hover,
+.servicetext-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+}
+
+.homeimage-content:hover,
+.aboutimage-content:hover,
+.serviceimage-content:hover {
+  transform: translateY(-5px);
+}
+/* Removed old gradient border effects for clean white hover */
+.homeimage-content img,
+.aboutimage-content img,
+.serviceimage-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-top: 16px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.homeimage-content img:hover,
+.aboutimage-content img:hover,
+.serviceimage-content img:hover {
+  transform: scale(1.03) rotate(0.5deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.05) contrast(1.02) saturate(1.1);
+}
+/* HEADING HOVER EFFECTS */
+.hometext-content h2,
+.abouttext-content h2,
+.servicetext-content h2 {
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hometext-content h2::after,
+.abouttext-content h2::after,
+.servicetext-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: #d0d0d0;
+  transition: all 0.4s ease;
+  transform: translateX(-50%);
+}
+
+.hometext-content h2:hover,
+.abouttext-content h2:hover,
+.servicetext-content h2:hover {
+  color: #333333;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: scale(1.01);
+}
+
+.hometext-content h2:hover::after,
+.abouttext-content h2:hover::after,
+.servicetext-content h2:hover::after {
+  width: 100%;
+}
+
+/* The original 'nav ul' and 'nav a' rules for your old nav bar are removed */
+
+main { 
+    max-width: 900px; 
+    margin: 20px auto; 
+    padding: 0 20px; 
+}
+/* The '.bottom-logo' rule is removed as the new footer doesn't use it. */
+
+/* NEW FOOTER STYLES (from friend's styles.css) */
+footer {
+  background-color: rgba(245, 245, 247, 0.6); 
+  border-top: 1px solid #d2d2d7;  
+  text-align: center; 
+  padding: 20px; 
+  margin-top: 40px; 
+  /* Overrides original footer styles */
+}
+
+/* Styles for footer links (from friend's styles.css) */    
+footer a {
+  color: #424245; 
+  text-decoration: none; 
+  font-size: 14px; 
+  margin: 0 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  /* Overrides original footer a styles */
+}
+
+/* Enhanced hover effect for footer links */
+footer a:hover {
+  color: #ffffff; 
+  background-color: #6ba6cd;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(107, 166, 205, 0.4);
+}
+
+/* ===== RESPONSIVE DESIGN - MOBILE FIRST APPROACH ===== */
+/* Tablet styles - 768px and below */
+@media (max-width: 768px) {
+  /* Attribute selector - targets elements with specific attributes */
+  img[alt] {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .hometext-content:hover,
+  .abouttext-content:hover,
+  .servicetext-content:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  }
+  
+  .homeimage-content img:hover,
+  .aboutimage-content img:hover,
+  .serviceimage-content img:hover {
+    transform: scale(1.02);
+  }
+  
+  nav a {
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+  
+  .side-by-side {
+    padding: 20px 15px;
+    gap: 30px;
+  }
+}
+
+/* Mobile styles - 480px and below */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .nav-wrapper {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .logo {
+    width: 60px;
+    height: 90px;
+  }
+  
+  /* Descendant selector - targets h2 inside content divs on mobile */
+  .hometext-content h2,
+  .abouttext-content h2,
+  .servicetext-content h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ===== ACCESSIBILITY FEATURES ===== */
+/* Disable hover effects on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .hometext-content:hover,
+  .abouttext-content:hover,
+  .servicetext-content:hover,
+  .homeimage-content img:hover,
+  .aboutimage-content img:hover,
+  .serviceimage-content img:hover {
+    transform: none;
+    box-shadow: none;
+    filter: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  body {
+    background: #ffffff;
+    color: #000000;
+  }
+  
+  nav a {
+    border: 2px solid #000000;
+  }
+  
+  .hometext-content,
+  .abouttext-content,
+  .servicetext-content {
+    background-color: #ffffff;
+    border: 3px solid #000000;
+  }
+}
+
+/* Reduced motion support for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus visible for keyboard navigation */
+*:focus-visible {
+  outline: 3px solid #6ba6cd;
+  outline-offset: 2px;
+}
+
+/* Skip to main content link (hidden but accessible) */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #6ba6cd;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
+}

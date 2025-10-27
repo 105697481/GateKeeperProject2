@@ -1,0 +1,253 @@
+/* === Global Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === HEADER === */
+header {
+  background-color: rgba(245, 245, 247, 0.3);
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 80px;
+  height: 120px;
+  margin-top: 7px;
+  margin-right: 5px;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+nav a {
+  color: #424245;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0 8px;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #0071e3;
+}
+
+/* === FOOTER === */
+footer {
+  background-color: rgba(245, 245, 247, 0.6);
+  border-top: 1px solid #d2d2d7;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #424245;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  color: #0071e3;
+}
+
+/* === GENERAL SECTION STYLING === */
+section {
+  width: 90%;
+  margin: 40px auto;
+  padding: 50px 5%;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.98));
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 1s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+section h1, section h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #005fcc;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+/* === BLUE SECTION (Top Info) === */
+#blue_section {
+  background: linear-gradient(to bottom, #0077ff, #4da6ff);
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+}
+
+#blue_section h1 {
+  color: #fff;
+  font-weight: bold;
+}
+
+#blue_section p,
+#blue_section li {
+  color: #f0f8ff;
+  font-size: 1.1rem;
+  list-style: disc;
+  margin: 5px 0;
+}
+
+#blue_section strong {
+  color: #fff;
+}
+
+/* === TEAM SECTION === */
+.team-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.member {
+  text-align: center;
+  width: 180px;
+  padding: 15px;
+  background: #f8fbff;
+  border: 1px solid #cce0ff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 3px solid #0077ff;
+}
+
+.member p {
+  font-weight: bold;
+  color: #005fcc;
+  font-size: 1rem;
+}
+
+/* === CONTRIBUTIONS SECTION === */
+#contributions_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.member-contributions {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 40px;
+}
+
+.member-contributions h3 {
+  text-align: center;
+  color: #003366;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.contribution-card {
+  background: #ffffff;
+  border-left: 6px solid #0077ff;
+  border-radius: 12px;
+  padding: 20px 25px;
+  width: 100%;
+  max-width: 650px;
+  margin: 15px auto;
+  text-align: left;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contribution-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.contribution-card h3 {
+  color: #005fcc;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.contribution-card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+
+/* === INTEREST TABLE === */
+.info-table {
+  width: 95%;
+  margin: 25px auto;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.info-table th, .info-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+}
+
+.info-table th {
+  background-color: #e6f0ff;
+  color: #003366;
+  font-weight: bold;
+}
+
+.info-table tr:nth-child(even) {
+  background-color: #f8fbff;
+}
+
+/* === ANIMATIONS === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 900px) {
+  section {
+    padding: 40px 5%;
+  }
+
+  .member {
+    width: 140px;
+  }
+
+  .contribution-card {
+    max-width: 90%;
+  }
+
+  .info-table th, .info-table td {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
